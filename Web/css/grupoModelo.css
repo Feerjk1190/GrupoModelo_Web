@@ -1,6 +1,7 @@
-/* ==========================================================================
+/* 
    1. ESTILOS GENERALES Y ESTRUCTURA BASE
-   ========================================================================== */
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -87,9 +88,9 @@ footer p {
   margin: 5px;
 }
 
-/* ==========================================================================
+/* 
    2. ESTILOS DE LA PÁGINA DE INICIO (INDEX)
-   ========================================================================== */
+*/
 .contenedorInicio {
   width: min(1360px, calc(100% - 48px));
   margin: 30px auto;
@@ -205,9 +206,9 @@ footer p {
   margin-top: 10px;
 }
 
-/* ==========================================================================
+/* 
    3. ESTILOS DE LA PÁGINA DE CATÁLOGO
-   ========================================================================== */
+ */
 .encabezadoCatalogo {
   background-color: #ffd100;
   padding: 14px 32px;
@@ -375,9 +376,9 @@ footer p {
   display: none;
 }
 
-/* ==========================================================================
+/* 
    4. ESTILOS DE INFORMACIÓN (NOSOTROS Y CONTACTO)
-   ========================================================================== */
+ */
 .contenedorNosotros,
 .contenedorContacto {
   width: min(1350px, calc(100% - 40px));
@@ -486,9 +487,9 @@ footer p {
   line-height: 1.6;
 }
 
-/* ==========================================================================
+/* 
    5. ADAPTACIÓN RESPONSIVE (MEDIA QUERIES)
-   ========================================================================== */
+   */
 @media (max-width: 1450px) {
   .rejillaProductos {
     grid-template-columns: repeat(3, minmax(0, 1fr));
