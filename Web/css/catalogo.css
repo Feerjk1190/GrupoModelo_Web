@@ -1,0 +1,26 @@
+.banner-catalogo { background: #ffd100; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.banner-catalogo h1 { font-size: 24px; margin: 0; color: #031930; }
+.buscador-box { border-radius: 7px; background: white; display: flex; align-items: center; padding: 9px 12px; gap: 8px; }
+.buscador-box input { border: none; outline: none; font-size: 14px; min-width: 210px; }
+.main-content-layout { display: flex; width: 100%; gap: 30px; padding: 28px 34px; align-items: flex-start; }
+.sidebar-categorias { flex: 0 0 235px; display: flex; flex-direction: column; gap: 7px; }
+.cat-item { text-align: left; padding: 15px; border: none; background: transparent; border-radius: 8px; font-weight: bold; color: #082b55; cursor: pointer; font-size: 15px; }
+.cat-item:hover { background: #e1eaf5; }
+.cat-item.active-cat { background: #ffd100; color: #031930; }
+.catalogo-contenido { flex: 1; min-width: 0; }
+.ordenar-productos { display: flex; align-items: center; justify-content: flex-end; gap: 15px; margin: 0 0 20px; font-weight: bold; }
+.ordenar-productos select { padding: 13px; border: 1px solid #cfdae9; background: white; border-radius: 7px; color: #082b55; }
+.grid-productos-app { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.card-horizontal { border: 1px solid #d6e0ed; border-radius: 12px; background: white; padding: 15px; min-width: 0; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 2px 7px #0000000a; }
+.card-img-col { background: #f6f8fc; border-radius: 10px; height: 190px; display: flex; align-items: center; justify-content: center; }
+.card-img-col img { height: 90%; width: 90%; object-fit: contain; }
+.card-info-col { display: flex; flex: 1; flex-direction: column; gap: 7px; }
+.card-info-col h4 { font-size: 17px; margin: 0; }
+.desc-pack, .stock-text { margin: 0; font-size: 13px; color: #536780; line-height: 1.5; }
+.precio-actual { font-size: 23px; color: #031930; margin-top: 10px; }
+.contenedor-ver-mas { text-align: center; margin: 25px 0; }
+.boton-ver-mas { padding: 13px 28px; background: #0088ff; color: white; border: 0; border-radius: 7px; font-weight: bold; cursor: pointer; }
+.contenedor-ver-mas:has(button[hidden]) { display: none; }
+@media (max-width: 1450px) { .grid-productos-app { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (max-width: 1050px) { .grid-productos-app { grid-template-columns: repeat(2, minmax(0,1fr)); } .sidebar-categorias { flex-basis: 175px; } }
+@media (max-width: 680px) { .banner-catalogo { flex-direction: column; align-items: stretch; } .main-content-layout { flex-direction: column; padding: 15px; } .sidebar-categorias { flex: auto; width: 100%; } .grid-productos-app { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; } .card-img-col { height: 135px; } .ordenar-productos { justify-content: flex-start; flex-wrap: wrap; } }
