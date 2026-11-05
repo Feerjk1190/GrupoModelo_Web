@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Grupo Modelo | Catálogo</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/general.css">
-<link rel="stylesheet" href="../css/inicio.css">
-<link rel="stylesheet" href="../css/catalogo.css">
-<link rel="stylesheet" href="../css/informacion.css">
+    <title>Grupo Modelo | Catálogo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/grupoModelo.css">
 </head>
-<body class="body-app">
-<header class="header-app">
-    <a class="marca-grupo" href="index.html"><img src="../img/logo.png" alt="Grupo Modelo"><span><b>GRUPO MODELO</b><small>MÉXICO</small></span></a>
-    <nav class="nav-app"><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="quienes-somos.html">¿Quiénes somos?</a><a href="contacto.html">Contacto</a></nav>
-</header>
-<div class="banner-catalogo"><h1>Catálogo - Nuestros Productos</h1>
-    <div class="buscador-box">🔍 <input id="buscarProducto" type="search" placeholder="Buscar producto..." autocomplete="off"></div>
-</div>
-<main class="main-content-layout">
-    <aside class="sidebar-categorias">
-        <button class="cat-item active-cat" data-filtro="todos">Todos los productos</button>
-        <button class="cat-item" data-filtro="cervezas">Cervezas</button>
-        <button class="cat-item" data-filtro="latas">Latas</button>
-        <button class="cat-item" data-filtro="botellas">Botellas</button>
-        <button class="cat-item" data-filtro="sixpacks">Six packs</button>
-        <button class="cat-item" data-filtro="promociones">Promociones</button>
-    </aside>
-    <section class="catalogo-contenido">
-        <div class="ordenar-productos"><label for="ordenPrecio">Ordenar por precio:</label>
-            <select id="ordenPrecio"><option value="normal">Orden original</option><option value="menor">Menor a mayor</option><option value="mayor">Mayor a menor</option></select>
+<body class="cuerpoPagina">
+
+    <header class="encabezadoPrincipal">
+        <a class="logoMarca" href="index.html">
+            <img src="../img/logo.png" alt="Grupo Modelo">
+            <span><b>GRUPO MODELO</b><small>MÉXICO</small></span>
+        </a>
+        <nav class="menuNavegacion">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="quienes-somos.html">¿Quiénes somos?</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="encabezadoCatalogo">
+        <h1>Catálogo - Nuestros Productos</h1>
+        <div class="cajaBuscador">
+            🔍 <input id="buscarProducto" type="search" placeholder="Buscar producto..." autocomplete="off">
         </div>
-        <div class="grid-productos-app" id="listaProductos"></div>
-        <div class="contenedor-ver-mas"><button id="verMas" class="boton-ver-mas">Ver más productos ↓</button></div>
-    </section>
-</main>
-<footer><p>Grupo Modelo - Todo con medida</p><p>Prohibida la venta de alcohol a menores de edad.</p></footer>
-<script src="../js/productos.js"></script>
-<script src="../js/catalogo.js"></script>
+    </div>
+
+    <main class="disposicionCatalogo">
+        <aside class="menuCategorias">
+            <button class="opcionCategoria categoriaActiva" data-filtro="todos">Todos los productos</button>
+            <button class="opcionCategoria" data-filtro="cervezas">Cervezas</button>
+            <button class="opcionCategoria" data-filtro="latas">Latas</button>
+            <button class="opcionCategoria" data-filtro="botellas">Botellas</button>
+            <button class="opcionCategoria" data-filtro="sixpacks">Six packs</button>
+            <button class="opcionCategoria" data-filtro="promociones">Promociones</button>
+        </aside>
+
+        <section class="listadoCatalogo">
+            <div class="opcionesOrden">
+                <label for="ordenPrecio">Ordenar por precio:</label>
+                <select id="ordenPrecio">
+                    <option value="normal">Orden original</option>
+                    <option value="menor">Menor a mayor</option>
+                    <option value="mayor">Mayor a menor</option>
+                </select>
+            </div>
+
+            <div class="rejillaProductos" id="listaProductos"></div>
+
+            <div class="bloqueCargarMas">
+                <button id="verMas" class="botonCargarMas">Ver más productos ↓</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Grupo Modelo - Todo con medida</p>
+        <p>Prohibida la venta de alcohol a menores de edad.</p>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/catalogo.js"></script>
 </body>
 </html>
