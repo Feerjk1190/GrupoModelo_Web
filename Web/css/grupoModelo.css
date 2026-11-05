@@ -1,1 +1,580 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES Y ESTRUCTURA BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #082b55;
+  background-color: #f0f4fa;
+}
+
+.cuerpoPagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado principal y navegación */
+.encabezadoPrincipal {
+  background-color: #031930;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  gap: 18px;
+}
+
+.logoMarca {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logoMarca img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 2px solid #ffd100;
+  border-radius: 50%;
+}
+
+.logoMarca span {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.logoMarca small {
+  font-size: 11px;
+  color: #cbd7e9;
+}
+
+.menuNavegacion {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.menuNavegacion a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.menuNavegacion a:hover {
+  color: #ffd100;
+}
+
+/* Pie de página */
+footer {
+  background-color: #031930;
+  color: #dae2ed;
+  text-align: center;
+  padding: 16px;
+  margin-top: auto;
+  font-size: 12px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+/* ==========================================================================
+   2. ESTILOS DE LA PÁGINA DE INICIO (INDEX)
+   ========================================================================== */
+.contenedorInicio {
+  width: min(1360px, calc(100% - 48px));
+  margin: 30px auto;
+}
+
+.seccionPortada {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background-color: #082b55;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 350px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13);
+}
+
+.textoPortada {
+  padding: 45px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subtituloAmarillo {
+  color: #ffd100;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.seccionPortada h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 17px 0;
+}
+
+.seccionPortada h1 span {
+  display: block;
+  color: #ffd100;
+}
+
+.seccionPortada p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e4eaf1;
+  margin-bottom: 22px;
+}
+
+.imagenPortada {
+  min-height: 350px;
+}
+
+.imagenPortada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botones reutilizables de inicio */
+.botonCatalogo,
+.botonEmpresa {
+  display: inline-block;
+  background-color: #ffd100;
+  color: #082b55;
+  padding: 14px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.seccionEmpresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background-color: #082b55;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.seccionEmpresa > img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.detalleEmpresa {
+  color: #ffffff;
+  padding: 40px;
+}
+
+.etiquetaFecha {
+  color: #ffd100;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.detalleEmpresa h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.detalleEmpresa p {
+  line-height: 1.7;
+  color: #e4eaf1;
+  margin-bottom: 12px;
+}
+
+.botonEmpresa {
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   3. ESTILOS DE LA PÁGINA DE CATÁLOGO
+   ========================================================================== */
+.encabezadoCatalogo {
+  background-color: #ffd100;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.encabezadoCatalogo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #031930;
+}
+
+.cajaBuscador {
+  border-radius: 7px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+}
+
+.cajaBuscador input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  min-width: 210px;
+}
+
+.disposicionCatalogo {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 28px 34px;
+  align-items: flex-start;
+}
+
+.menuCategorias {
+  flex: 0 0 235px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.opcionCategoria {
+  text-align: left;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #082b55;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.opcionCategoria:hover {
+  background-color: #e1eaf5;
+}
+
+.opcionCategoria.categoriaActiva {
+  background-color: #ffd100;
+  color: #031930;
+}
+
+.listadoCatalogo {
+  flex: 1;
+  min-width: 0;
+}
+
+.opcionesOrden {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.opcionesOrden select {
+  padding: 13px;
+  border: 1px solid #cfdae9;
+  background-color: #ffffff;
+  border-radius: 7px;
+  color: #082b55;
+}
+
+.rejillaProductos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tarjetaProducto {
+  border: 1px solid #d6e0ed;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 15px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+}
+
+.imagenProducto {
+  background-color: #f6f8fc;
+  border-radius: 10px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenProducto img {
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+}
+
+.informacionProducto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.informacionProducto h4 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.descripcionPaquete,
+.textoDisponibilidad {
+  margin: 0;
+  font-size: 13px;
+  color: #536780;
+  line-height: 1.5;
+}
+
+.precioProducto {
+  font-size: 23px;
+  color: #031930;
+  margin-top: 10px;
+}
+
+.bloqueCargarMas {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.botonCargarMas {
+  padding: 13px 28px;
+  background-color: #0088ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bloqueCargarMas:has(button[hidden]) {
+  display: none;
+}
+
+/* ==========================================================================
+   4. ESTILOS DE INFORMACIÓN (NOSOTROS Y CONTACTO)
+   ========================================================================== */
+.contenedorNosotros,
+.contenedorContacto {
+  width: min(1350px, calc(100% - 40px));
+  margin: 30px auto;
+}
+
+.encabezadoSeccion {
+  background-color: #ffd100;
+  padding: 17px 25px;
+  border-radius: 10px 10px 0 0;
+}
+
+.encabezadoSeccion h1 {
+  margin: 0;
+  font-size: 29px;
+}
+
+.presentacionNosotros {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background-color: #ffffff;
+  border: 1px solid #dbe4ef;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.imagenNosotros img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.informacionNosotros {
+  padding: 35px;
+}
+
+.etiquetaNosotros {
+  font-size: 12px;
+  color: #9d7c00;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.informacionNosotros h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.informacionNosotros > p {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.tarjetasNosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 26px;
+}
+
+.tarjetaNosotros {
+  background-color: #edf4fc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tarjetaNosotros h3 {
+  margin: 0 0 8px;
+}
+
+.tarjetaNosotros p {
+  margin: 0;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.panelContacto {
+  background-color: #f3f7fc;
+  border: 1px solid #dbe4ef;
+  border-radius: 0 0 10px 10px;
+  padding: 25px;
+}
+
+.panelContacto h2 {
+  font-size: 22px;
+  margin: 0 0 18px;
+}
+
+.bloqueContacto {
+  background-color: #ffffff;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+.bloqueContacto h3 {
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.bloqueContacto p {
+  margin: 5px 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. ADAPTACIÓN RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 1450px) {
+  .rejillaProductos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1050px) {
+  .rejillaProductos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .menuCategorias {
+    flex-basis: 175px;
+  }
+}
+
+@media (max-width: 780px) {
+  .presentacionNosotros {
+    grid-template-columns: 1fr;
+  }
+  .imagenNosotros img {
+    min-height: 230px;
+    max-height: 300px;
+  }
+  .informacionNosotros {
+    padding: 22px;
+  }
+  .tarjetasNosotros {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .seccionPortada,
+  .seccionEmpresa {
+    grid-template-columns: 1fr;
+  }
+  .textoPortada {
+    padding: 30px;
+  }
+  .seccionPortada h1 {
+    font-size: 32px;
+  }
+  .imagenPortada {
+    min-height: 250px;
+  }
+  .detalleEmpresa {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 720px) {
+  .encabezadoPrincipal {
+    flex-direction: column;
+    padding: 14px;
+  }
+  .menuNavegacion {
+    justify-content: center;
+    gap: 12px;
+  }
+  .menuNavegacion a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 680px) {
+  .encabezadoCatalogo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .disposicionCatalogo {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .menuCategorias {
+    flex: auto;
+    width: 100%;
+  }
+  .rejillaProductos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .imagenProducto {
+    height: 135px;
+  }
+  .opcionesOrden {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
