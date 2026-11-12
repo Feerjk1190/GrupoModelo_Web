@@ -1,0 +1,168 @@
+.nosotros-contenedor {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.nosotros-titulo {
+    background: #ffda28;
+    border-radius: 10px 10px 0 0;
+    padding: 17px 25px;
+}
+
+.nosotros-titulo h1 {
+    margin: 0;
+    color: #082b55;
+    font-size: 30px;
+}
+
+.nosotros-presentacion {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.nosotros-imagen {
+    min-height: 440px;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nosotros-informacion {
+    padding: 35px;
+}
+
+.nosotros-etiqueta {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #bd9200;
+}
+
+.nosotros-informacion h2 {
+    color: #082b55;
+    font-size: 29px;
+    margin: 12px 0 15px;
+}
+
+.nosotros-informacion > p {
+    color: #475569;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.nosotros-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.nosotros-tarjeta {
+    background: #edf4fc;
+    border: 1px solid #dbe7f5;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.nosotros-tarjeta h3 {
+    color: #082b55;
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.nosotros-tarjeta p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.nosotros-footer {
+    background: #061c34;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.nosotros-footer p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .nosotros-presentacion {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-imagen {
+        height: 300px;
+        min-height: 0;
+    }
+
+    .nosotros-informacion {
+        padding: 25px;
+    }
+
+    .nosotros-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-informacion h2 {
+        font-size: 25px;
+    }
+}
+
+/* Tipografía de la página Quiénes somos */
+
+.nosotros-contenedor,
+.nosotros-footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Ajustes del encabezado */
+
+.header-app {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-app .marca-grupo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.header-app .logo-texto {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header-app .logo-circulo img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.header-app .nav-app {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

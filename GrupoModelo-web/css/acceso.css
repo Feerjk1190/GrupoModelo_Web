@@ -1,0 +1,460 @@
+/* VENTANA DE INICIO DE SESIÓN */
+
+.modal-login {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(3, 25, 48, 0.65);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-login.activo {
+    display: flex;
+}
+
+.modal-login-contenido {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 45px #00000030;
+}
+
+.modal-login-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    border: none;
+    background: transparent;
+    color: #697687;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-login-icono {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.modal-login-contenido h2 {
+    color: #031930;
+    font-size: 23px;
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+
+.modal-login-contenido p {
+    color: #697687;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.modal-login-iniciar,
+.modal-login-registrar {
+    display: block;
+    padding: 13px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.modal-login-iniciar {
+    background: #ffd100;
+    color: #031930;
+}
+
+.modal-login-registrar {
+    background: white;
+    color: #031930;
+    border: 1px solid #d5dce6;
+}
+
+.modal-login-cancelar {
+    background: transparent;
+    border: none;
+    color: #697687;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.modal-login-iniciar:hover {
+    background: #edc200;
+}
+
+.modal-login-registrar:hover {
+    background: #f3f6fa;
+}
+
+
+/* ======================================
+   REGISTRO DE USUARIOS - GRUPO MODELO
+====================================== */
+
+.body-app .registro-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 45px 20px 70px;
+}
+
+.body-app .registro-tarjeta {
+    width: 100%;
+    max-width: 590px;
+    background: white;
+    padding: 38px 42px;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px #00000012;
+}
+
+.body-app .registro-encabezado {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.body-app .registro-encabezado h1 {
+    color: #031930;
+    font-size: 26px;
+    margin: 0 0 12px;
+}
+
+.body-app .registro-encabezado p {
+    color: #68788c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.body-app .registro-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.body-app .registro-campo {
+    margin-bottom: 19px;
+}
+
+.body-app .registro-campo label {
+    display: block;
+    color: #031930;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.body-app .registro-campo input {
+    width: 100%;
+    height: 47px;
+    padding: 12px 14px;
+    border: 1px solid #d5dfeb;
+    border-radius: 7px;
+    background: #fff;
+    color: #031930;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.body-app .registro-campo input:focus {
+    border-color: #0088ff;
+    box-shadow: 0 0 0 3px #0088ff18;
+}
+
+.body-app .registro-campo input::placeholder {
+    color: #9ba8b8;
+}
+
+.body-app .registro-ayuda {
+    color: #788698;
+    font-size: 12px;
+    margin: -5px 0 18px;
+}
+
+.body-app .registro-mensaje {
+    display: none;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.body-app .registro-mensaje.error {
+    display: block;
+    background: #fff0f0;
+    color: #b42323;
+    border: 1px solid #ffd0d0;
+}
+
+.body-app .registro-mensaje.exito {
+    display: block;
+    background: #e8f7ef;
+    color: #16804a;
+    border: 1px solid #bce8cf;
+}
+
+.body-app .registro-boton {
+    width: 100%;
+    padding: 15px;
+    background: #ffd100;
+    color: #031930;
+    font-size: 14px;
+    font-weight: 800;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.body-app .registro-boton:hover {
+    background: #efc500;
+}
+
+.body-app .registro-login {
+    text-align: center;
+    color: #68788c;
+    font-size: 13px;
+    margin: 25px 0 0;
+}
+
+.body-app .registro-login a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.body-app .registro-login a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+    .body-app .registro-tarjeta {
+        padding: 28px 22px;
+    }
+
+    .body-app .registro-fila {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .body-app .registro-encabezado h1 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* ======================================
+   LOGIN - GRUPO MODELO WEB
+====================================== */
+
+.body-app .login-contenedor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 45px 20px 70px;
+}
+
+.body-app .login-tarjeta {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 38px 42px;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px #00000012;
+}
+
+.body-app .login-encabezado {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.body-app .login-icono {
+    width: 65px;
+    height: 65px;
+    background: #fff3c4;
+    color: #031930;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+    font-size: 30px;
+}
+
+.body-app .login-encabezado h1 {
+    color: #031930;
+    font-size: 26px;
+    margin: 0 0 12px;
+}
+
+.body-app .login-encabezado p {
+    color: #68788c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.body-app .login-campo {
+    margin-bottom: 22px;
+}
+
+.body-app .login-campo label {
+    display: block;
+    color: #031930;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.body-app .login-campo > input,
+.body-app .login-password input {
+    width: 100%;
+    height: 47px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid #d5dfeb;
+    border-radius: 7px;
+    color: #031930;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.body-app .login-campo input:focus {
+    border-color: #0088ff;
+    box-shadow: 0 0 0 3px #0088ff18;
+}
+
+.body-app .login-campo input::placeholder {
+    color: #9ba8b8;
+}
+
+/* CAMPO CON BOTÓN MOSTRAR */
+
+.body-app .login-password {
+    position: relative;
+}
+
+.body-app .login-password input {
+    padding-right: 90px;
+}
+
+.body-app .login-ver-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #007bff;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* MENSAJES */
+
+.body-app .login-mensaje {
+    display: none;
+    padding: 12px;
+    margin: 0 0 18px;
+    border-radius: 7px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.body-app .login-mensaje.error {
+    display: block;
+    background: #fff0f0;
+    border: 1px solid #ffd0d0;
+    color: #b42323;
+}
+
+.body-app .login-mensaje.info {
+    display: block;
+    background: #eaf4ff;
+    border: 1px solid #c4defa;
+    color: #17558c;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.body-app .login-boton {
+    width: 100%;
+    padding: 15px;
+    background: #ffd100;
+    color: #031930;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.body-app .login-boton:hover {
+    background: #efc500;
+}
+
+/* PIE DEL LOGIN */
+
+.body-app .login-pie {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.body-app .login-pie p {
+    color: #68788c;
+    font-size: 13px;
+    margin: 0 0 18px;
+}
+
+.body-app .login-pie p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.body-app .login-pie p a:hover {
+    text-decoration: underline;
+}
+
+.body-app .login-explorar {
+    color: #68788c;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.body-app .login-explorar:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .body-app .login-contenedor {
+        padding: 30px 15px 55px;
+    }
+
+    .body-app .login-tarjeta {
+        padding: 30px 22px;
+    }
+
+    .body-app .login-encabezado h1 {
+        font-size: 22px;
+    }
+
+}
+
+

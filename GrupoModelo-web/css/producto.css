@@ -1,0 +1,246 @@
+.detalle-regresar {
+    color: #082b55;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.detalle-regresar:hover {
+    text-decoration: underline;
+}
+
+.detalle-contenedor {
+    display: grid;
+    grid-template-columns: 45% minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px;
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.detalle-imagenes,
+.detalle-informacion {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.detalle-imagen-principal {
+    background: #f6f8fb;
+    border-radius: 10px;
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.detalle-imagen-principal img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 430px;
+    object-fit: contain;
+}
+
+.detalle-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.detalle-encabezado h1 {
+    color: #082b55;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.detalle-disponible {
+    background: #059669;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.detalle-categoria {
+    color: #7186a3;
+    margin: 12px 0 18px;
+}
+
+.detalle-precios {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detalle-precios strong {
+    color: #082b55;
+    font-size: 34px;
+}
+
+.detalle-descripcion {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.detalle-compra {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.detalle-compra label {
+    color: #082b55;
+    font-weight: 800;
+}
+
+.detalle-compra input {
+    width: 75px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.detalle-compra button {
+    flex: 1;
+    min-width: 160px;
+    border: none;
+    background: #0088ff;
+    color: white;
+    border-radius: 6px;
+    padding: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.detalle-compra button:hover {
+    background: #0066cc;
+}
+
+.detalle-especificaciones {
+    background: #f3f7fc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.detalle-especificaciones h2 {
+    color: #082b55;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.detalle-especificaciones table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.detalle-especificaciones th,
+.detalle-especificaciones td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.detalle-especificaciones th {
+    color: #082b55;
+    width: 45%;
+}
+
+.detalle-especificaciones td {
+    color: #475569;
+}
+
+@media (max-width: 900px) {
+    .detalle-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-imagen-principal {
+        min-height: 320px;
+    }
+
+    .detalle-encabezado h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .detalle-contenedor {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .detalle-imagenes,
+    .detalle-informacion {
+        padding: 15px;
+    }
+
+    .detalle-encabezado {
+        flex-direction: column;
+    }
+
+    .detalle-precios strong {
+        font-size: 28px;
+    }
+}
+
+
+/* Botón para abrir el detalle del producto */
+.body-app .btn-ver-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    background: #0088ff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    transition: background 0.2s;
+}
+
+.body-app .btn-ver-detalle:hover {
+    background: #0066cc;
+}
+
+
+/* BOTÓN VER DETALLES DEL CATÁLOGO */
+
+.body-app .btn-ver-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 45px;
+    background: #0088ff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.body-app .btn-ver-detalle:hover {
+    background: #0066cc;
+}
+
+
+
+.detalle-disponible.detalle-bajo { background: #f59e0b; color: #082b55; }
+.detalle-disponible.detalle-agotado { background: #b91c1c; color: #ffffff; }

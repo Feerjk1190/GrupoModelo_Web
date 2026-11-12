@@ -1,0 +1,139 @@
+.contacto-contenedor {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contacto-titulo {
+    background: #ffda28;
+    border-radius: 10px 10px 0 0;
+    padding: 17px 25px;
+}
+
+.contacto-titulo h1 {
+    color: #082b55;
+    font-size: 30px;
+    margin: 0;
+}
+
+.contacto-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border: 1px solid #dbe4ef;
+    border-radius: 0 0 10px 10px;
+}
+
+.contacto-panel {
+    background: #f3f7fc;
+    border: 1px solid #dbe4ef;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.contacto-panel h2 {
+    color: #082b55;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+
+.contacto-panel > p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto-formulario label {
+    color: #082b55;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+    color: #082b55;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario select:focus,
+.contacto-formulario textarea:focus {
+    border-color: #087de0;
+    outline: 2px solid #b5dafa;
+}
+
+.contacto-boton {
+    background: #ffda28;
+    color: #082b55;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contacto-boton:hover {
+    background: #edc51a;
+}
+
+.contacto-aviso {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.contacto-dato {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.contacto-dato h3 {
+    color: #082b55;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.contacto-dato p {
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contacto-enlace {
+    display: inline-block;
+    background: #082b55;
+    color: white;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contacto-enlace:hover {
+    background: #104779;
+}
+
+
