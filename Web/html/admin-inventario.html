@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grupo Modelo | Inventario</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin.css?v=4">
+    <link rel="stylesheet" href="../css/admin-inventario.css?v=2">
+</head>
+
+<body class="body-app">
+
+    <header class="header-app">
+        <div class="logo-seccion">
+            <a href="admin.html" class="marca-grupo">
+                <span class="logo-circulo-gm"><img src="../img/logo.png" alt="Grupo Modelo"></span>
+                <span class="logo-texto"><span>GRUPO MODELO</span><small>MÉXICO</small></span>
+            </a>
+        </div>
+        <nav class="nav-app">
+            <a href="admin.html" class="nav-item">Panel</a>
+            <a href="admin-pedidos.html" class="nav-item">Pedidos</a>
+            <a href="admin-inventario.html" class="nav-item" aria-current="page">Inventario</a>
+            <a href="admin-descuentos.html" class="nav-item">Descuentos</a>
+            <a href="admin-mensajes.html" class="nav-item">Mensajes</a>
+            <a href="admin-clientes.html" class="nav-item">Clientes</a>
+            <a href="catalogo.html" class="btn-app btn-yellow">Ver tienda</a>
+            <button type="button" id="adminCerrarSesion" class="btn-app btn-red">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <section class="admin-titulo">
+        <h1>Inventario</h1>
+    </section>
+
+    <main class="inventario-contenedor">
+
+        <a href="admin.html" class="admin-volver">
+            ← Volver al panel
+        </a>
+
+        <section class="inventario-estadisticas">
+
+            <div class="inventario-tarjeta">
+                <h3>Productos registrados</h3>
+                <p id="totalProductos">0</p>
+                <span>Productos del catálogo</span>
+            </div>
+
+            <div class="inventario-tarjeta">
+                <h3>Bajo stock</h3>
+                <p id="totalBajoStock">0</p>
+                <span>Productos con pocas existencias</span>
+            </div>
+
+            <div class="inventario-tarjeta">
+                <h3>Entradas registradas</h3>
+                <p id="totalEntradas">0</p>
+                <span>Unidades ingresadas</span>
+            </div>
+
+            <div class="inventario-tarjeta">
+                <h3>Salidas registradas</h3>
+                <p id="totalSalidas">0</p>
+                <span>Unidades que han salido</span>
+            </div>
+
+        </section>
+
+        <section class="inventario-panel">
+
+            <h2>Control de inventario</h2>
+
+            <p>
+                Consulta los productos registrados,
+                sus existencias y movimientos de inventario.
+            </p>
+
+            <div class="inventario-filtros">
+
+                <div class="inventario-campo">
+
+                    <label for="buscarInventario">
+                        Buscar producto
+                    </label>
+
+                    <input
+                        type="text"
+                        id="buscarInventario"
+                        placeholder="Nombre del producto"
+                    >
+
+                </div>
+
+                <div class="inventario-campo">
+
+                    <label for="filtroCategoria">
+                        Categoría
+                    </label>
+
+                    <select id="filtroCategoria">
+                        <option value="todos">Todas</option>
+                        <option value="latas">Latas</option>
+                        <option value="botellas">Botellas</option>
+                        <option value="sixpacks">Six packs</option>
+                    </select>
+
+                </div>
+
+                <div class="inventario-campo">
+
+                    <label for="filtroStock">
+                        Disponibilidad
+                    </label>
+
+                    <select id="filtroStock">
+                        <option value="todos">Todos los niveles</option>
+                        <option value="Disponible">Disponible</option>
+                        <option value="Bajo stock">Bajo stock</option>
+                        <option value="Agotado">Agotado</option>
+                    </select>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="limpiarInventario"
+                    class="inventario-limpiar">
+                    Limpiar filtros
+                </button>
+
+            </div>
+
+            <div class="inventario-acciones">
+
+                <button
+                    type="button"
+                    id="abrirEntrada"
+                    class="inventario-boton-entrada">
+                    + Registrar entrada
+                </button>
+
+            </div>
+
+            <section id="panelEntrada"
+                     class="inventario-formulario-panel"
+                     hidden>
+
+                <h3>Registrar entrada de mercancía</h3>
+
+                <p>
+                    Selecciona un producto y escribe la cantidad
+                    de unidades que llegaron al inventario.
+                </p>
+
+                <form id="formEntrada">
+
+                    <div class="inventario-entrada-campos">
+
+                        <div class="inventario-campo">
+
+                            <label for="productoEntrada">
+                                Producto
+                            </label>
+
+                            <select id="productoEntrada" required>
+                                <option value="">
+                                    Selecciona un producto
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <div class="inventario-campo">
+
+                            <label for="cantidadEntrada">
+                                Unidades recibidas
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cantidadEntrada"
+                                min="1"
+                                max="10000"
+                                step="1"
+                                placeholder="Ejemplo: 15"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <p id="stockEntrada"
+                       class="inventario-stock-info"></p>
+
+                    <div class="inventario-entrada-botones">
+
+                        <button
+                            type="submit"
+                            id="guardarEntrada"
+                            class="inventario-boton-entrada">
+                            Guardar entrada
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelarEntrada"
+                            class="inventario-limpiar">
+                            Cancelar
+                        </button>
+
+                    </div>
+
+                    <p id="mensajeEntrada"
+                       class="inventario-mensaje"
+                       aria-live="polite"></p>
+
+                </form>
+
+            </section>
+
+            <div class="inventario-tabla-contenedor">
+
+                <table class="inventario-tabla">
+
+                    <thead>
+
+                        <tr>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Presentación</th>
+                            <th>Stock actual</th>
+                            <th>Entradas</th>
+                            <th>Salidas</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="listaInventario">
+
+                        <tr>
+                            <td colspan="7">
+                                Cargando inventario...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="mensajeInventario"
+               class="inventario-mensaje"></p>
+
+        </section>
+
+    </main>
+
+    <script src="../js/admin-inventario.js?v=2"></script>
+
+    <script src="../js/admin-saludo.js?v=2"></script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clientes | Grupo Modelo</title>
+
+    <link rel="stylesheet" href="../css/base.css?v=2">
+    <link rel="stylesheet" href="../css/admin.css?v=4">
+
+    <link rel="stylesheet" href="../css/admin-clientes.css?v=5">
+</head>
+
+<body class="body-app">
+
+
+    <header class="header-app">
+        <div class="logo-seccion">
+            <a href="admin.html" class="marca-grupo">
+                <span class="logo-circulo-gm"><img src="../img/logo.png" alt="Grupo Modelo"></span>
+                <span class="logo-texto"><span>GRUPO MODELO</span><small>MÉXICO</small></span>
+            </a>
+        </div>
+        <nav class="nav-app">
+            <a href="admin.html" class="nav-item">Panel</a>
+            <a href="admin-pedidos.html" class="nav-item">Pedidos</a>
+            <a href="admin-inventario.html" class="nav-item">Inventario</a>
+            <a href="admin-descuentos.html" class="nav-item">Descuentos</a>
+            <a href="admin-mensajes.html" class="nav-item">Mensajes</a>
+            <a href="admin-clientes.html" class="nav-item" aria-current="page">Clientes</a>
+            <a href="catalogo.html" class="btn-app btn-yellow">Ver tienda</a>
+            <button type="button" id="adminCerrarSesion" class="btn-app btn-red">Cerrar sesión</button>
+        </nav>
+    </header>
+
+ 
+    <section class="admin-titulo">
+        <h1>Clientes registrados</h1>
+    </section>
+
+ 
+
+    <main class="clientes-main">
+
+        <section class="clientes-introduccion">
+
+            <div>
+                <h2>Administración de clientes</h2>
+
+                <p>
+                    Consulta las cuentas registradas
+                    en Grupo Modelo. Las cuentas @modelo.com pueden autorizarse como personal después de verificar su identidad.
+                </p>
+            </div>
+
+            
+
+        </section>
+
+        <a href="admin.html" class="admin-volver">← Volver al panel</a>
+
+        <section class="clientes-filtros">
+
+            <div class="clientes-busqueda">
+
+                <label for="buscarCliente">
+                    Buscar cliente
+                </label>
+
+                <input type="search"
+                       id="buscarCliente"
+                       placeholder="Buscar por nombre o correo">
+
+            </div>
+
+        </section>
+
+
+        <section class="clientes-panel">
+
+            <div class="clientes-panel-titulo">
+
+                <h2>Listado de clientes</h2>
+
+                <span id="cantidadClientes">
+                    0 clientes
+                </span>
+
+            </div>
+
+            <div class="clientes-tabla-contenedor">
+
+                <table class="clientes-tabla">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre completo</th>
+                            <th>Correo electrónico</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaClientes">
+
+                        <tr>
+                            <td colspan="5" class="clientes-vacio">
+                                Cargando clientes...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <section class="clientes-detalle-panel">
+
+            <div class="clientes-panel-titulo">
+                <h2>Información del cliente</h2>
+            </div>
+
+            <div id="clienteSinSeleccion"
+                 class="cliente-sin-seleccion">
+
+                <p>
+                    Selecciona un cliente de la tabla
+                    para consultar su información.
+                </p>
+
+            </div>
+
+            <div id="clienteDetalle"
+                 class="cliente-detalle oculto">
+
+                <div class="cliente-detalle-grid">
+
+                    <div class="cliente-detalle-dato">
+
+                        <strong>ID del cliente</strong>
+
+                        <p id="detalleIdCliente"></p>
+
+                    </div>
+
+                    <div class="cliente-detalle-dato">
+
+                        <strong>Nombre completo</strong>
+
+                        <p id="detalleNombreCliente"></p>
+
+                    </div>
+
+                    <div class="cliente-detalle-dato">
+
+                        <strong>Correo electrónico</strong>
+
+                        <p id="detalleCorreoCliente"></p>
+
+                    </div>
+
+                    <div class="cliente-detalle-dato">
+
+                        <strong>Tipo de cuenta</strong>
+
+                        <p id="detalleRolCliente"></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/admin-clientes.js?v=5"></script>
+
+    <script src="../js/admin-saludo.js?v=2"></script>
+
+</body>
+
+</html>
