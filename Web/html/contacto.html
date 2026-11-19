@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Modelo | Contacto</title>
+        <link rel="stylesheet" href="../css/base.css?v=2">
+    <link rel="stylesheet" href="../css/inicio.css?v=1">
+    <link rel="stylesheet" href="../css/nosotros.css?v=1">
+    <link rel="stylesheet" href="../css/contacto.css?v=1">
+    <link rel="stylesheet" href="../css/catalogo.css?v=1">
+    <link rel="stylesheet" href="../css/producto.css?v=1">
+    <link rel="stylesheet" href="../css/carrito.css?v=1">
+    <link rel="stylesheet" href="../css/acceso.css?v=1">
+    <link rel="stylesheet" href="../css/confirmacion.css?v=1">
+    <link rel="stylesheet" href="../css/compras.css?v=1">
+    <link rel="stylesheet" href="../css/ajustes.css?v=1">
+</head>
+
+<body class="body-app">
+
+    <!-- ENCABEZADO -->
+    <header class="header-app">
+        <div class="logo-seccion">
+            <a class="marca-grupo" href="index.html" aria-label="Volver al inicio">
+                <span class="logo-circulo">
+                    <img src="../img/logo.png" alt="Logo de Grupo Modelo">
+                </span>
+                <span class="logo-texto">
+                    <span>GRUPO MODELO</span>
+                    <small>MÉXICO</small>
+                </span>
+            </a>
+
+        </div>
+
+        <nav class="nav-app" aria-label="Navegación principal">
+            <a href="index.html" class="nav-item">Inicio</a>
+            <a href="catalogo.html" class="nav-item">Catálogo</a>
+            <a href="quienes-somos.html" class="nav-item">¿Quiénes somos?</a>
+            <a href="contacto.html" class="nav-item">Contacto</a>
+            <div id="navSesion" class="nav-sesion"></div>
+        </nav>
+    </header>
+
+    <main class="contacto-contenedor">
+
+        <div class="contacto-titulo">
+            <h1>Contacto</h1>
+        </div>
+
+        <div class="contacto-columnas">
+
+            <!-- FORMULARIO -->
+            <section class="contacto-panel">
+                <h2>Envíanos un mensaje</h2>
+                <p>
+                    ¿Tienes alguna pregunta sobre nuestros productos
+                    o el servicio de distribución? Escríbenos.
+                </p>
+
+                
+<form class="contacto-formulario" id="formContacto">
+
+    <label for="nombre">Nombre completo</label>
+    <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Tu nombre completo"
+        maxlength="100"
+        required
+    >
+
+    <label for="correo">Correo electrónico</label>
+    <input
+        type="email"
+        id="correo"
+        name="correo"
+        placeholder="ejemplo@correo.com"
+        maxlength="150"
+        required
+    >
+
+    <label for="asunto">Asunto</label>
+    <select id="asunto" name="asunto" required>
+        <option value="">Selecciona un asunto</option>
+        <option value="Información de productos">Información de productos</option>
+        <option value="Pedidos y distribución">Pedidos y distribución</option>
+        <option value="Atención al cliente">Atención al cliente</option>
+        <option value="Otro">Otro</option>
+    </select>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="6"
+        placeholder="Escribe tu mensaje..."
+        maxlength="1000"
+        required
+    ></textarea>
+
+    <button type="submit" class="contacto-boton" id="btnEnviarContacto">
+        Enviar mensaje
+    </button>
+
+        <p class="contacto-aviso" id="contactoAviso" aria-live="polite"></p>
+
+</form>
+
+            </section>
+
+            <!-- INFORMACIÓN DE ATENCIÓN -->
+            <section class="contacto-panel">
+                <h2>Información de contacto</h2>
+
+                
+<div class="contacto-dato">
+    <h3>Teléfono de atención</h3>
+    <p>800 466 3356</p>
+    <p>CDMX: 55 91 38 99 90</p>
+</div>
+
+<div class="contacto-dato">
+    <h3>Correo electrónico</h3>
+    <p>atencionbees@ab-inbev.com</p>
+</div>
+
+<div class="contacto-dato">
+    <h3>Horario de atención telefónica</h3>
+    <p>Lunes a viernes: 8:00 a 19:00</p>
+    <p>Sábados: 9:00 a 14:00</p>
+</div>
+
+
+                <div class="contacto-dato">
+                    <h3>Información corporativa</h3>
+                    <p>
+                        Grupo Modelo México
+                    </p>
+                </div>
+
+                <div class="contacto-dato">
+                    <h3>Pedidos y distribución</h3>
+                    <p>
+                        Los clientes registrados podrán consultar
+                        sus pedidos y su estado desde la plataforma.
+                    </p>
+                </div>
+
+                <div class="contacto-redes">
+
+    <h3>Nuestras redes sociales</h3>
+
+    <p>
+        Síguenos para conocer nuestras novedades,
+        productos y noticias.
+    </p>
+
+    <div class="contacto-redes-enlaces">
+
+        <a href="https://www.facebook.com/GrupoModeloMX/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Facebook
+        </a>
+
+        <a href="https://www.instagram.com/grupomodelomx/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Instagram
+        </a>
+
+        <a href="https://www.linkedin.com/company/grupo-modelo/"
+           target="_blank"
+           rel="noopener noreferrer">
+            LinkedIn
+        </a>
+
+    </div>
+
+</div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="nosotros-footer">
+        <p>Grupo Modelo - Todo con medida</p>
+        <p>Prohibida la venta de alcohol a menores de edad.</p>
+    </footer>
+
+    <script src="../js/navegacion.js?v=11"></script>
+    <script src="../js/contacto.js?v=1"></script>
+</body>
+</html>

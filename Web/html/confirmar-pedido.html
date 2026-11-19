@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grupo Modelo | Confirmar pedido</title>
+
+        <link rel="stylesheet" href="../css/base.css?v=2">
+    <link rel="stylesheet" href="../css/inicio.css?v=1">
+    <link rel="stylesheet" href="../css/nosotros.css?v=1">
+    <link rel="stylesheet" href="../css/contacto.css?v=1">
+    <link rel="stylesheet" href="../css/catalogo.css?v=1">
+    <link rel="stylesheet" href="../css/producto.css?v=1">
+    <link rel="stylesheet" href="../css/carrito.css?v=1">
+    <link rel="stylesheet" href="../css/acceso.css?v=1">
+    <link rel="stylesheet" href="../css/confirmacion.css?v=1">
+    <link rel="stylesheet" href="../css/compras.css?v=1">
+    <link rel="stylesheet" href="../css/ajustes.css?v=1">
+</head>
+
+<body class="body-app">
+
+    <div class="app-container">
+
+        <header class="header-app">
+
+            <div class="logo-seccion">
+
+                <div class="logo-circulo-gm">
+                    <img src="../img/logo.png" alt="Grupo Modelo">
+                </div>
+
+                <div class="logo-texto">
+                    <span>GRUPO MODELO</span>
+                    <small>MÉXICO</small>
+                </div>
+
+            
+
+            </div>
+
+            <nav class="nav-app" aria-label="Navegación principal">
+            <a href="index.html" class="nav-item">Inicio</a>
+            <a href="catalogo.html" class="nav-item">Catálogo</a>
+            <div id="navSesion" class="nav-sesion"></div>
+        </nav>
+
+        </header>
+
+        <div class="banner-catalogo">
+
+            <h2>Confirmación del pedido</h2>
+
+            <a href="carrito.html" class="carrito-regresar">
+                ← Regresar al carrito
+            </a>
+
+        </div>
+
+        <main class="confirmacion-contenedor">
+
+            <div class="confirmacion-aviso">
+                Vista preliminar de confirmación.
+                Todavía no se realizan pedidos desde esta pantalla.
+            </div>
+
+            <div class="confirmacion-layout">
+
+                <section class="confirmacion-formulario">
+
+                    <h2>Datos de entrega</h2>
+
+                    <p class="confirmacion-intro">
+                        Completa la información para que podamos
+                        preparar y entregar tu pedido.
+                    </p>
+
+                    <form id="formConfirmacion">
+
+                        <div class="confirmacion-campo">
+
+                            <label for="pedidoNombre">
+                                Nombre de quien recibe
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pedidoNombre"
+                                placeholder="Nombre completo"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+                        <div class="confirmacion-fila">
+
+                            <div class="confirmacion-campo">
+
+                                <label for="pedidoTelefono">
+                                    Teléfono de contacto
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="pedidoTelefono"
+                                    placeholder="10 dígitos"
+                                    maxlength="10"
+                                    inputmode="numeric"
+                                    autocomplete="tel"
+                                    required>
+
+                            </div>
+
+                            <div class="confirmacion-campo">
+
+                                <label for="pedidoCodigoPostal">
+                                    Código postal
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="pedidoCodigoPostal"
+                                    placeholder="5 dígitos"
+                                    maxlength="5"
+                                    inputmode="numeric"
+                                    autocomplete="postal-code"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="confirmacion-campo">
+
+                            <label for="pedidoDireccion">
+                                Dirección de entrega
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pedidoDireccion"
+                                placeholder="Calle, número, colonia y municipio"
+                                autocomplete="street-address"
+                                required>
+
+                        </div>
+
+                        <div class="confirmacion-campo">
+
+                            <label for="pedidoReferencias">
+                                Referencias de entrega
+                            </label>
+
+                            <textarea
+                                id="pedidoReferencias"
+                                rows="4"
+                                placeholder="Color de fachada, entre calles, indicaciones adicionales..."></textarea>
+
+                        </div>
+
+                        <div class="confirmacion-informacion">
+
+                            <strong>Información importante</strong>
+
+                            <p>
+                                Los productos y las existencias se
+                                verificarán antes de registrar el pedido.
+                                La información de entrega debe ser correcta.
+                            </p>
+
+                        </div>
+                        <br>
+
+                        <p id="confirmacionMensaje"
+                           class="confirmacion-mensaje"
+                           role="status"
+                           aria-live="polite"></p>
+
+                        <button
+                            type="button"
+                            id="btnGuardarEntrega"
+                            class="confirmacion-boton">
+                            GUARDAR DATOS DE ENTREGA
+                        </button>
+
+                    </form>
+
+                </section>
+
+                <aside class="confirmacion-resumen">
+
+                    <h2>Resumen de tu pedido</h2>
+
+                    <p class="confirmacion-resumen-nota">
+                        Estos productos corresponden a tu carrito actual.
+                    </p>
+
+                    <div id="confirmacionProductos"
+                         class="confirmacion-productos">
+
+                        <div class="confirmacion-producto-vacio">
+                            🛒
+                            <p>Resumen pendiente de cargar</p>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="confirmacion-resumen-fila">
+                        <span>Subtotal</span>
+                        <span id="confirmacionSubtotal">—</span>
+                    </div>
+
+                    <div class="confirmacion-resumen-fila">
+                        <span>Envío</span>
+                        <span>Por calcular</span>
+                    </div>
+
+                    <div class="confirmacion-total">
+                        <span>Total provisional</span>
+                        <strong id="confirmacionTotal">—</strong>
+                    </div>
+
+                    <button
+                        type="submit"
+                        form="formConfirmacion"
+                        id="btnConfirmarPedido"
+                        class="confirmacion-boton"
+                        disabled>
+                        CONFIRMAR PEDIDO
+                    </button>
+                    
+                    <br>
+
+                    <a href="carrito.html"
+                       class="confirmacion-editar">
+                       <br>
+                        ← Editar mi carrito
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </main>
+
+    </div>
+<script src="../js/confirmar-pedido.js?v=2"></script>
+
+    <script src="../js/navegacion.js?v=11"></script>
+</body>
+</html>
