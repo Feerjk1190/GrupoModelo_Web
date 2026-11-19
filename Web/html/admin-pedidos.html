@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grupo Modelo | Gestión de pedidos</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin.css?v=4">
+
+    <link rel="stylesheet" href="../css/admin-pedidos.css?v=1">
+</head>
+
+<body class="body-app admin-oculto">
+
+    <header class="header-app">
+        <div class="logo-seccion">
+            <a href="admin.html" class="marca-grupo">
+                <span class="logo-circulo-gm"><img src="../img/logo.png" alt="Grupo Modelo"></span>
+                <span class="logo-texto"><span>GRUPO MODELO</span><small>MÉXICO</small></span>
+            </a>
+        </div>
+        <nav class="nav-app">
+            <a href="admin.html" class="nav-item">Panel</a>
+            <a href="admin-pedidos.html" class="nav-item" aria-current="page">Pedidos</a>
+            <a href="admin-inventario.html" class="nav-item">Inventario</a>
+            <a href="admin-descuentos.html" class="nav-item">Descuentos</a>
+            <a href="admin-mensajes.html" class="nav-item">Mensajes</a>
+            <a href="admin-clientes.html" class="nav-item">Clientes</a>
+            <a href="catalogo.html" class="btn-app btn-yellow">Ver tienda</a>
+            <button type="button" id="adminCerrarSesion" class="btn-app btn-red">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <section class="admin-titulo">
+        <h1>Gestión de pedidos</h1>
+    </section>
+
+    <main class="pedidos-contenedor">
+
+        <a href="admin.html" class="admin-volver">
+            ← Volver al panel
+        </a>
+
+        <div class="pedidos-layout">
+
+            <div>
+
+                <section class="pedidos-panel">
+
+                    <h2>Buscar pedidos</h2>
+
+                    <div class="pedidos-filtros">
+
+                        <div class="pedidos-campo">
+
+                            <label for="buscarPedido">
+                                Buscar pedido o cliente
+                            </label>
+
+                            <input
+                                type="text"
+                                id="buscarPedido"
+                                placeholder="Número o nombre del cliente"
+                            >
+
+                        </div>
+
+                        <div class="pedidos-campo">
+
+                            <label for="filtroEstado">
+                                Estado
+                            </label>
+
+                            <select id="filtroEstado">
+                                <option value="todos">Todos</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="En preparación">En preparación</option>
+                                <option value="En camino">En camino</option>
+                                <option value="Enviado">Enviado</option>
+                                <option value="Entregado">Entregado</option>
+                                <option value="Cancelado">Cancelado</option>
+                            </select>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="limpiarFiltros"
+                            class="pedidos-limpiar">
+                            Limpiar filtros
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <section class="pedidos-panel">
+
+                    <h2>Lista de pedidos</h2>
+
+                    <p>
+                        Consulta las compras realizadas por los clientes
+                        y abre sus detalles.
+                    </p>
+
+                    <div class="pedidos-tabla-contenedor">
+
+                        <table class="pedidos-tabla">
+
+                            <thead>
+                                <tr>
+                                    <th>No. Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Fecha</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="listaPedidos">
+
+                                <tr>
+                                    <td colspan="6">
+                                        Cargando pedidos...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <aside class="pedidos-panel">
+
+                <h2>Estado actual de todos los pedidos.</h2>
+
+                <div class="resumen-item">
+                    <span>Pendientes</span>
+                    <strong id="totalPendientes">0</strong>
+                </div>
+
+                <div class="resumen-item">
+                    <span>En preparación</span>
+                    <strong id="totalPreparacion">0</strong>
+                </div>
+
+                <div class="resumen-item">
+                    <span>En camino / enviados</span>
+                    <strong id="totalEnviados">0</strong>
+                </div>
+
+                <div class="resumen-item">
+                    <span>Entregados</span>
+                    <strong id="totalEntregados">0</strong>
+                </div>
+
+                <div class="resumen-item">
+                    <span>Cancelados</span>
+                    <strong id="totalCancelados">0</strong>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <script src="../js/admin-pedidos.js?v=1"></script>
+
+    <script src="../js/admin-saludo.js?v=2"></script>
+
+</body>
+</html>

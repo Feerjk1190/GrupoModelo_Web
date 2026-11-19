@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grupo Modelo | Administración</title>
+
+    <link rel="stylesheet" href="../css/base.css?v=2">
+    <link rel="stylesheet" href="../css/admin.css?v=4">
+</head>
+
+<body class="body-app">
+
+    <header class="header-app">
+        <div class="logo-seccion">
+            <a href="admin.html" class="marca-grupo">
+                <span class="logo-circulo-gm"><img src="../img/logo.png" alt="Grupo Modelo"></span>
+                <span class="logo-texto"><span>GRUPO MODELO</span><small>MÉXICO</small></span>
+            </a>
+        </div>
+        <nav class="nav-app">
+            <a href="admin.html" class="nav-item" aria-current="page">Panel</a>
+            <a href="admin-pedidos.html" class="nav-item">Pedidos</a>
+            <a href="admin-inventario.html" class="nav-item">Inventario</a>
+            <a href="admin-descuentos.html" class="nav-item">Descuentos</a>
+            <a href="admin-mensajes.html" class="nav-item">Mensajes</a>
+            <a href="admin-clientes.html" class="nav-item">Clientes</a>
+            <!-- Nuevo: control de repartidores para Android -->
+            <a href="admin-repartidores.html" class="nav-item">Repartidores</a>
+            <a href="catalogo.html" class="btn-app btn-yellow">Ver tienda</a>
+            <button type="button" id="adminCerrarSesion" class="btn-app btn-red">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <!-- TÍTULO -->
+    <section class="admin-titulo">
+        <h1>Panel de administración</h1>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="admin-contenedor">
+
+        <!-- ESTADÍSTICAS -->
+        <div class="admin-estadisticas">
+
+            <div class="admin-tarjeta">
+
+                <h3>Pedidos pendientes</h3>
+
+                <p id="totalPendientes">0</p>
+
+                <span>Pedidos por procesar</span>
+
+            </div>
+
+            <div class="admin-tarjeta">
+
+                <h3>Productos registrados</h3>
+
+                <p id="totalProductos">0</p>
+
+                <span>Productos del catálogo</span>
+
+            </div>
+
+            <div class="admin-tarjeta">
+
+                <h3>Mensajes pendientes</h3>
+
+                <p id="totalMensajes">0</p>
+
+                <span>Mensajes por revisar</span>
+
+            </div>
+
+            <div class="admin-tarjeta">
+
+                <h3>Ventas registradas</h3>
+
+                <p id="totalVentas">$0.00</p>
+
+                <span>Total de ventas</span>
+
+            </div>
+
+        </div>
+
+        <!-- BIENVENIDA -->
+        <section class="admin-panel">
+
+            <h2>Bienvenido al panel de administración</h2>
+
+            <p>
+                Desde aquí podrás consultar los pedidos,
+                administrar el inventario, modificar descuentos,
+                revisar mensajes, gestionar la información
+                de los clientes y administrar los repartidores de Android.
+            </p>
+
+        </section>
+
+        <!-- Acceso a la administración de repartidores -->
+        <section class="admin-panel">
+            <h2>Aplicación de repartidores</h2>
+            <br>
+            <p>Registra, edita y activa los repartidores que usarán Android.</p>
+            <br>
+            <a href="admin-repartidores.html" class="btn-app btn-yellow">Administrar repartidores</a>
+        </section>
+
+    </main>
+
+<script src="../js/admin.js?v=2"></script>
+
+<script src="../js/admin-saludo.js?v=2"></script>
+
+</body>
+</html>
