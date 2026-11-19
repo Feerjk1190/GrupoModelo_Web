@@ -1,0 +1,382 @@
+
+/* Contenedor principal del inventario */
+
+.inventario-contenedor {
+    width: 100%;
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.inventario-regresar {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #082b55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.inventario-regresar:hover {
+    text-decoration: underline;
+}
+
+/* Tarjetas con las estadísticas del inventario */
+
+.inventario-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.inventario-tarjeta {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.inventario-tarjeta h3 {
+    color: #031930;
+    font-size: 16px;
+    margin: 0 0 12px;
+}
+
+.inventario-tarjeta p {
+    color: #082b55;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+.inventario-tarjeta span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Panel principal del inventario */
+
+.inventario-panel {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.inventario-panel h2 {
+    color: #031930;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.inventario-panel > p {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Buscador y filtros */
+
+.inventario-filtros {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.inventario-campo {
+    flex: 1;
+    min-width: 180px;
+}
+
+.inventario-campo label {
+    display: block;
+    color: #031930;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inventario-campo input,
+.inventario-campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    color: #031930;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.inventario-campo input:focus,
+.inventario-campo select:focus {
+    outline: 2px solid #b5dafa;
+    border-color: #087de0;
+}
+
+.inventario-limpiar {
+    padding: 12px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #f3f7fc;
+    color: #031930;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inventario-limpiar:hover {
+    background: #e2e8f0;
+}
+
+/* Botón para abrir el formulario */
+
+.inventario-acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.inventario-boton-entrada {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    background: #ffd100;
+    color: #031930;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inventario-boton-entrada:hover:not(:disabled) {
+    background: #edc400;
+}
+
+.inventario-boton-entrada:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Formulario para registrar entradas de mercancía */
+
+.inventario-formulario-panel {
+    background: #f3f7fc;
+    border: 1px solid #dbe4ef;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.inventario-formulario-panel[hidden] {
+    display: none;
+}
+
+.inventario-formulario-panel h3 {
+    color: #031930;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.inventario-formulario-panel > p {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.inventario-entrada-campos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.inventario-stock-info {
+    margin: 15px 0;
+    color: #082b55;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inventario-entrada-botones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.inventario-mensaje {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 18px;
+    line-height: 1.5;
+}
+
+.inventario-mensaje.exito {
+    color: #166534;
+}
+
+.inventario-mensaje.error {
+    color: #b91c1c;
+}
+
+/* Tabla con los productos de MySQL */
+
+.inventario-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.inventario-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventario-tabla th,
+.inventario-tabla td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.inventario-tabla th {
+    background: #f3f7fc;
+    color: #031930;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.inventario-tabla td {
+    color: #334155;
+}
+
+.inventario-tabla tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Nombre e imagen del producto */
+
+.inventario-producto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.inventario-producto img {
+    width: 45px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.inventario-producto strong {
+    color: #031930;
+    font-size: 14px;
+}
+
+/* Etiquetas de disponibilidad */
+
+.inventario-estado {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.inventario-disponible {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.inventario-bajo {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.inventario-agotado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Resaltar existencias bajas o agotadas */
+
+.inventario-stock-bajo {
+    color: #b45309 !important;
+    font-weight: bold;
+}
+
+.inventario-stock-agotado {
+    color: #dc2626 !important;
+    font-weight: bold;
+}
+
+/* Diseño para pantallas pequeñas */
+
+@media (max-width: 1100px) {
+    .inventario-estadisticas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .inventario-contenedor {
+        padding: 0 12px;
+        margin: 20px auto;
+    }
+
+    .inventario-estadisticas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .inventario-tarjeta {
+        padding: 20px;
+    }
+
+    .inventario-panel {
+        padding: 15px;
+    }
+
+    .inventario-campo {
+        min-width: 100%;
+    }
+
+    .inventario-limpiar {
+        width: 100%;
+    }
+
+    .inventario-acciones {
+        justify-content: stretch;
+    }
+
+    .inventario-acciones .inventario-boton-entrada {
+        width: 100%;
+    }
+
+    .inventario-formulario-panel {
+        padding: 18px;
+    }
+
+    .inventario-entrada-campos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .inventario-entrada-botones {
+        flex-direction: column;
+    }
+
+    .inventario-entrada-botones button {
+        width: 100%;
+    }
+
+    .inventario-tabla th,
+    .inventario-tabla td {
+        padding: 10px;
+    }
+}

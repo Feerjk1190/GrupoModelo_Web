@@ -1,0 +1,221 @@
+.body-app .grid-productos-app {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-content: start;
+    min-width: 0;
+}
+
+/* Tarjetas verticales */
+.body-app .card-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    min-width: 0;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.body-app .card-horizontal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* Contenedor de imagen */
+.body-app .card-img-col {
+    width: 100%;
+    height: 170px;
+    background: #f7f9fc;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Imagen del producto */
+.body-app .card-img-col img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 145px;
+    object-fit: contain;
+}
+
+/* Información */
+.body-app .card-info-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+    min-width: 0;
+}
+
+.body-app .card-info-col h4 {
+    color: #082b55;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.body-app .desc-pack {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.body-app .stock-text {
+    font-size: 12px;
+    color: #475569;
+    margin: 0;
+}
+
+/* Precio */
+.body-app .precio-row {
+    margin-top: auto;
+    margin-bottom: 0;
+    min-height: 28px;
+}
+
+.body-app .precio-actual,
+.body-app .precio-oferta {
+    font-size: 20px;
+}
+
+/* Botones y cantidades: temporales */
+.body-app .card-accion-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.body-app .input-spinner {
+    width: 55px;
+    min-height: 38px;
+}
+
+.body-app .btn-anadir {
+    min-height: 38px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Etiqueta de oferta */
+.body-app .badge-oferta {
+    top: 22px;
+    right: 22px;
+    z-index: 1;
+}
+
+/* Pantallas medianas */
+@media (max-width: 1500px) {
+    .body-app .grid-productos-app {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1100px) {
+    .body-app .grid-productos-app {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    .body-app .main-content-layout {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .body-app .sidebar-categorias {
+        width: 100%;
+    }
+
+    .body-app .grid-productos-app {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .body-app .card-horizontal {
+        padding: 10px;
+    }
+
+    .body-app .card-img-col {
+        height: 140px;
+    }
+
+    .body-app .card-img-col img {
+        max-height: 120px;
+    }
+
+    .body-app .banner-catalogo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .body-app .buscador-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .body-app .grid-productos-app {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 850px) {
+    .contacto-columnas {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .contacto-panel {
+        padding: 18px;
+    }
+}
+
+
+
+
+.body-app .indicador-stock {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 9px;
+    border-radius: 20px;
+    margin: 3px 0;
+}
+.body-app .indicador-stock.disponible { background: #dcfce7; color: #166534; }
+.body-app .indicador-stock.bajo { background: #fef3c7; color: #92400e; }
+.body-app .indicador-stock.agotado { background: #fee2e2; color: #991b1b; }
+
+.body-app .destacados-seccion {
+    margin: 24px 25px 5px;
+    padding: 22px;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    background: #fff;
+}
+.body-app .destacados-seccion[hidden] { display: none; }
+.body-app .destacados-encabezado h2 { margin: 0 0 5px; color: #082b55; font-size: 23px; }
+.body-app .destacados-encabezado p { margin: 0 0 18px; color: #64748b; }
+.body-app .destacados-lista { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.body-app .destacado-tarjeta { display: flex; align-items: center; gap: 12px; text-decoration: none; border: 1px solid #dbe4ef; border-radius: 9px; padding: 12px; min-width: 0; color: #082b55; }
+.body-app .destacado-tarjeta:hover { border-color: #d3ae00; background: #fffef3; }
+.body-app .destacado-tarjeta img { width: 85px; height: 95px; object-fit: contain; flex-shrink: 0; }
+.body-app .destacado-tarjeta div { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.body-app .destacado-tarjeta h3 { font-size: 14px; line-height: 1.35; margin: 0; }
+.body-app .destacado-tarjeta strong { font-size: 17px; }
+@media (max-width: 1150px) { .body-app .destacados-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) {
+    .body-app .destacados-seccion { margin: 15px 12px 5px; padding: 15px; }
+    .body-app .destacados-lista { grid-template-columns: 1fr; }
+}

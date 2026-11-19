@@ -1,0 +1,85 @@
+.descuentos-panel {
+            background: white;
+            border: 1px solid #dbe4ef;
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .descuentos-panel h2 {
+            color: #031930;
+            margin-top: 0;
+        }
+
+        .descuentos-panel p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .descuentos-tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .descuentos-tabla th,
+        .descuentos-tabla td {
+            padding: 15px;
+            border-bottom: 1px solid #dbe4ef;
+            text-align: left;
+        }
+
+        .descuentos-tabla th {
+            color: #031930;
+            background: #f3f7fc;
+        }
+
+        .descuentos-tabla td {
+            color: #334155;
+        }
+
+        .descuento-input {
+            width: 90px;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .descuento-guardar {
+            background: #ffd100;
+            color: #031930;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .descuento-guardar:hover {
+            background: #edc400;
+        }
+
+        .descuento-guardar:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .descuento-mensaje {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .descuentos-contenedor-tabla {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 600px) {
+            .descuentos-panel {
+                padding: 15px;
+            }
+
+            .descuentos-tabla th,
+            .descuentos-tabla td {
+                padding: 10px;
+            }
+        }

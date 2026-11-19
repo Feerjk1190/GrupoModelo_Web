@@ -1,0 +1,220 @@
+
+/*
+========================================
+GRUPO MODELO
+PANEL DE ADMINISTRACION - REPARTIDORES
+
+Este archivo controla el diseño visual
+del apartado de repartidores.
+
+Colores:
+Azul marino: #1B3047
+Dorado: #C7AD73
+Gris claro: #F5F6F8
+========================================
+*/
+
+/* Panel principal */
+.repartidores-panel {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* Titulos */
+.repartidores-panel h2 {
+    color: #1B3047;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Textos */
+.repartidores-panel p {
+    color: #697586;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Formulario de registro */
+.repartidores-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* Etiquetas de los campos */
+.repartidores-campos label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #1B3047;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Campos de texto */
+.repartidores-campos input,
+.repartidores-campos select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background: white;
+    color: #273449;
+    font-size: 14px;
+}
+
+/* Al seleccionar un campo */
+.repartidores-campos input:focus,
+.repartidores-campos select:focus {
+    outline: none;
+    border-color: #1B3047;
+}
+
+/* Nota de contraseña */
+.repartidores-nota {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #697586;
+}
+
+/* Contenedor de botones */
+.repartidores-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Boton guardar */
+.repartidores-guardar {
+    background: #1B3047;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto sencillo al pasar el mouse */
+.repartidores-guardar:hover {
+    background: #34475C;
+}
+
+/* Boton cancelar */
+.repartidores-cancelar {
+    background: #e5e7eb;
+    color: #273449;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.repartidores-cancelar:hover {
+    background: #d1d5db;
+}
+
+/* Botones deshabilitados */
+.repartidores-acciones button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Mensajes de confirmacion o error */
+#mensaje {
+    margin-top: 15px;
+    min-height: 20px;
+    color: #1B3047;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Contenedor de la tabla */
+.repartidores-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+/* Tabla de repartidores */
+.repartidores-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+/* Encabezados */
+.repartidores-tabla th {
+    background: #1B3047;
+    color: white;
+    padding: 13px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Datos de la tabla */
+.repartidores-tabla td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #273449;
+    font-size: 13px;
+}
+
+/* Filas alternadas */
+.repartidores-tabla tbody tr:nth-child(even) {
+    background: #F5F6F8;
+}
+
+/* Resaltar fila */
+.repartidores-tabla tbody tr:hover {
+    background: #e9edf2;
+}
+
+/* Botones de editar y activar */
+.repartidores-accion {
+    background: #C7AD73;
+    color: #1B3047;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.repartidores-accion:hover {
+    background: #b89a59;
+}
+
+/* Diseño para celulares */
+@media (max-width: 700px) {
+
+    .repartidores-panel {
+        padding: 16px;
+    }
+
+    .repartidores-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .repartidores-acciones {
+        flex-direction: column;
+    }
+
+    .repartidores-guardar,
+    .repartidores-cancelar {
+        width: 100%;
+    }
+
+    .repartidores-tabla {
+        min-width: 750px;
+    }
+}

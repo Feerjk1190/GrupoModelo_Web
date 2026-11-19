@@ -1,0 +1,290 @@
+
+/* ========================================
+   CLIENTES DEL ADMINISTRADOR
+======================================== */
+
+/* CONTENIDO PRINCIPAL */
+
+.clientes-main {
+    width: 92%;
+    max-width: 1290px;
+    margin: 35px auto 60px;
+}
+
+/* ========================================
+   INTRODUCCIÓN
+======================================== */
+
+.clientes-introduccion {
+    margin-bottom: 15px;
+}
+
+.clientes-introduccion h2 {
+    font-size: 25px;
+    color: #071c34;
+    margin: 0 0 8px;
+}
+
+.clientes-introduccion p {
+    font-size: 14px;
+    color: #647b9b;
+    margin: 0;
+}
+
+/* ========================================
+   ENLACE VOLVER AL PANEL
+======================================== */
+
+.clientes-regresar {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: #071c34;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.clientes-regresar:hover {
+    color: #a67c00;
+    text-decoration: underline;
+}
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.clientes-filtros {
+    background-color: white;
+    border: 1px solid #d8e2ee;
+    border-radius: 12px;
+    padding: 23px;
+    margin-bottom: 25px;
+}
+
+.clientes-busqueda {
+    max-width: 550px;
+}
+
+.clientes-busqueda label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #071c34;
+    margin-bottom: 10px;
+}
+
+.clientes-busqueda input {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 12px 15px;
+
+    background-color: white;
+    border: 1px solid #d8e2ee;
+    border-radius: 8px;
+
+    font-size: 14px;
+    color: #071c34;
+}
+
+.clientes-busqueda input:focus {
+    outline: none;
+    border-color: #d6a42e;
+}
+
+/* ========================================
+   TABLA Y PANEL DE DETALLES
+======================================== */
+
+.clientes-panel,
+.clientes-detalle-panel {
+    background-color: white;
+    border: 1px solid #d8e2ee;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.clientes-panel-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 22px 25px;
+    border-bottom: 1px solid #d8e2ee;
+}
+
+.clientes-panel-titulo h2 {
+    font-size: 19px;
+    color: #071c34;
+    margin: 0;
+}
+
+.clientes-panel-titulo span {
+    font-size: 13px;
+    color: #647b9b;
+}
+
+/* ========================================
+   TABLA DE CLIENTES
+======================================== */
+
+.clientes-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.clientes-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.clientes-tabla thead {
+    background-color: #f3f6fa;
+}
+
+.clientes-tabla th {
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #071c34;
+    border-bottom: 1px solid #d8e2ee;
+}
+
+.clientes-tabla td {
+    padding: 17px 20px;
+    font-size: 14px;
+    color: #42556c;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.clientes-tabla tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.clientes-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+   BOTÓN VER DETALLES
+======================================== */
+
+.cliente-btn-detalle {
+    padding: 9px 15px;
+
+    background-color: #ffcc00;
+    color: #071c34;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cliente-btn-detalle:hover {
+    background-color: #e8b900;
+}
+
+/* ========================================
+   MENSAJE SIN RESULTADOS
+======================================== */
+
+.clientes-vacio {
+    text-align: center;
+    padding: 35px 20px !important;
+    color: #647b9b;
+}
+
+/* ========================================
+   INFORMACIÓN DEL CLIENTE
+======================================== */
+
+.cliente-sin-seleccion {
+    padding: 40px 25px;
+    text-align: center;
+    color: #647b9b;
+}
+
+.cliente-detalle {
+    padding: 25px;
+}
+
+.cliente-detalle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.cliente-detalle-dato {
+    padding: 18px;
+
+    background-color: #f6f9fc;
+    border: 1px solid #e5edf5;
+    border-radius: 9px;
+}
+
+.cliente-detalle-dato strong {
+    display: block;
+    font-size: 13px;
+    color: #647b9b;
+    margin-bottom: 9px;
+}
+
+.cliente-detalle-dato p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #071c34;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Ocultar el detalle hasta seleccionar un cliente */
+
+.clientes-main .oculto {
+    display: none !important;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO
+======================================== */
+
+@media (max-width: 650px) {
+
+    .clientes-main {
+        width: 94%;
+        margin-top: 25px;
+    }
+
+    .clientes-introduccion h2 {
+        font-size: 22px;
+    }
+
+    .clientes-filtros {
+        padding: 18px;
+    }
+
+    .clientes-panel-titulo {
+        padding: 18px;
+    }
+
+    .cliente-detalle-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .cliente-detalle {
+        padding: 18px;
+    }
+
+}
+
+/* Botón independiente para autorizar cuentas corporativas verificadas */
+.cliente-btn-autorizar { margin-left:8px; padding:9px 12px; background:#103b5e; color:white; border:0; border-radius:7px; cursor:pointer; font-size:13px; font-weight:700; }
+.cliente-btn-autorizar:hover { background:#062642; }

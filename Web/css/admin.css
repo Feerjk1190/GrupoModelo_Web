@@ -1,0 +1,114 @@
+.admin-titulo {
+    background: #ffd100;
+    padding: 20px 35px;
+}
+
+.admin-titulo h1 {
+    color: #031930;
+    margin: 0;
+    font-size: 27px;
+}
+
+.admin-contenedor {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+
+.admin-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.admin-tarjeta {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.admin-tarjeta h3 {
+    color: #031930;
+    font-size: 17px;
+    margin: 0 0 15px;
+}
+
+.admin-tarjeta p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #031930;
+    margin: 0 0 10px;
+}
+
+.admin-tarjeta span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.admin-panel {
+    background: white;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.admin-panel h2 {
+    color: #031930;
+}
+
+.admin-panel p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .admin-estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .admin-estadisticas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Navegación del administrador */
+.admin-proximo { opacity: .65; cursor: default; }
+.header-app .btn-app { white-space: nowrap; }
+@media (max-width: 1020px) {
+    .header-app { flex-wrap: wrap; gap: 12px; }
+    .nav-app { flex-wrap: wrap; }
+}
+
+/* Mantener ocultas las pantallas administrativas hasta verificar la sesión */
+.admin-oculto {
+    visibility: hidden;
+}
+
+/* Alinear el logo del encabezado sin estilos dentro de HTML */
+.marca-grupo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+/* Navegación unificada en todas las pantallas administrativas */
+.header-app { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.header-app .logo-seccion { flex-shrink:0; }
+.header-app .nav-app { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; }
+.header-app .nav-item { white-space:nowrap; }
+.header-app .nav-item[aria-current="page"] { color:#031930; background:#ffd100; font-weight:800; }
+.header-app .nav-item:not([aria-current="page"]):hover { background:rgba(255,255,255,.13); }
+.header-app #adminSaludo { color:#fff; font-weight:700; white-space:nowrap; }
+.header-app #adminCerrarSesion { border:0; cursor:pointer; font-family:inherit; }
+.admin-volver { display:inline-flex; align-items:center; gap:8px; margin:0 0 24px; padding:0; border:0; background:transparent; color:#153453; font-size:17px; font-weight:700; text-decoration:none; }
+.admin-volver:hover { color:#9b7600; text-decoration:underline; }
+@media (max-width:1150px) {
+  .header-app { flex-wrap:wrap; }
+  .header-app .nav-app { justify-content:flex-start; width:100%; }
+}
+@media (max-width:600px) { .header-app { padding:12px 15px; } .header-app .nav-app { gap:4px; } .header-app .nav-item { padding:8px 9px; } }

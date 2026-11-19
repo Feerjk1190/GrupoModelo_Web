@@ -1,0 +1,537 @@
+.body-app .confirmacion-producto-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e4e8ed;
+}
+
+.body-app .confirmacion-producto-item img {
+    width: 55px;
+    height: 70px;
+    object-fit: contain;
+    background: #f6f8fb;
+    border-radius: 7px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.body-app .confirmacion-producto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.body-app .confirmacion-producto-info strong {
+    display: block;
+    color: #031930;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.body-app .confirmacion-producto-info p {
+    color: #697687;
+    font-size: 12px;
+    margin: 6px 0;
+}
+
+.body-app .confirmacion-producto-info span {
+    color: #697687;
+    font-size: 12px;
+}
+
+.body-app .confirmacion-producto-precio {
+    color: #031930;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.body-app .confirmacion-mensaje.exito {
+    color: #16804a;
+    background: #e8f7ef;
+    border: 1px solid #bce8cf;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.body-app .confirmacion-mensaje.error:not(:empty) {
+    color: #b42323;
+    background: #fff0f0;
+    border: 1px solid #ffd0d0;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+
+/* =====================================
+   MIS COMPRAS - GRUPO MODELO
+===================================== */
+
+.body-app .compras-contenedor {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 25px 60px;
+}
+
+.body-app .compras-tarjeta {
+    background: white;
+    border-radius: 13px;
+    padding: 32px;
+    box-shadow: 0 4px 18px #00000010;
+}
+
+.body-app .compras-encabezado {
+    border-bottom: 1px solid #e4e8ed;
+    padding-bottom: 22px;
+}
+
+.body-app .compras-encabezado h2 {
+    color: #031930;
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.body-app .compras-encabezado p {
+    color: #697687;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CUANDO NO HAY COMPRAS */
+
+.body-app .compras-vacio {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.body-app .compras-icono {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.body-app .compras-vacio h3 {
+    color: #031930;
+    font-size: 21px;
+    margin: 0 0 13px;
+}
+
+.body-app .compras-vacio p {
+    color: #697687;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 430px;
+    margin: 0 auto 25px;
+}
+
+.body-app .compras-explorar {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #ffd100;
+    color: #031930;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.body-app .compras-explorar:hover {
+    background: #edc400;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .body-app .compras-contenedor {
+        padding: 0 14px 40px;
+    }
+
+    .body-app .compras-tarjeta {
+        padding: 22px;
+    }
+
+    .body-app .compras-vacio {
+        padding: 45px 10px;
+    }
+
+    .body-app .compras-vacio h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+/* ===================================
+   MIS COMPRAS - GRUPO MODELO
+=================================== */
+
+.body-app .compras-contenedor {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 25px 60px;
+}
+
+.body-app .compras-tarjeta {
+    background: white;
+    border-radius: 13px;
+    padding: 32px;
+    box-shadow: 0 4px 18px #00000010;
+}
+
+.body-app .compras-encabezado {
+    border-bottom: 1px solid #e4e8ed;
+    padding-bottom: 22px;
+}
+
+.body-app .compras-encabezado h2 {
+    color: #031930;
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.body-app .compras-encabezado p {
+    color: #697687;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CARRITO SIN PEDIDOS */
+
+.body-app .compras-vacio {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.body-app .compras-icono {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.body-app .compras-vacio h3 {
+    color: #031930;
+    font-size: 21px;
+    margin: 0 0 13px;
+}
+
+.body-app .compras-vacio p {
+    color: #697687;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 430px;
+    margin: 0 auto 25px;
+}
+
+.body-app .compras-explorar {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #ffd100;
+    color: #031930;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.body-app .compras-explorar:hover {
+    background: #edc400;
+}
+
+@media (max-width: 600px) {
+
+    .body-app .compras-contenedor {
+        padding: 0 14px 40px;
+    }
+
+    .body-app .compras-tarjeta {
+        padding: 22px;
+    }
+
+    .body-app .compras-vacio {
+        padding: 45px 10px;
+    }
+
+}
+
+.nav-sesion {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* =====================================
+   PERFIL DEL CLIENTE + HISTORIAL
+===================================== */
+
+.body-app .perfil-contenedor {
+    width: min(1200px, calc(100% - 40px));
+    margin: 30px auto 55px;
+}
+
+.body-app .perfil-layout {
+    display: grid;
+    grid-template-columns: 285px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.body-app .perfil-identidad,
+.body-app .perfil-tarjeta,
+.body-app .perfil-historial .compras-tarjeta {
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-top: 4px solid #ffd100;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #0000000c;
+}
+
+.body-app .perfil-identidad {
+    min-height: 330px;
+    padding: 30px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.body-app .perfil-avatar {
+    width: 104px;
+    height: 104px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e5ebf2;
+    color: #031930;
+    border: 3px solid #d5dfeb;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.body-app .perfil-identidad h2 {
+    color: #031930;
+    font-size: 20px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.body-app .perfil-tipo {
+    color: #697687;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.body-app .perfil-identificador {
+    color: #697687;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.body-app .perfil-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #e8f7ef;
+    color: #16804a;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.body-app .perfil-estado-punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #20a464;
+}
+
+.body-app .perfil-panel {
+    min-width: 0;
+}
+
+.body-app .perfil-tarjeta {
+    padding: 27px 30px 30px;
+}
+
+.body-app .perfil-seccion-encabezado {
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e4e8ed;
+}
+
+.body-app .perfil-seccion-encabezado h2,
+.body-app .perfil-historial .compras-encabezado h2 {
+    color: #031930;
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.body-app .perfil-seccion-encabezado p,
+.body-app .perfil-historial .compras-encabezado p {
+    color: #697687;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.body-app .perfil-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+}
+
+.body-app .perfil-campo {
+    min-width: 0;
+}
+
+.body-app .perfil-campo-completo {
+    grid-column: 1 / -1;
+}
+
+.body-app .perfil-campo label {
+    display: block;
+    color: #031930;
+    font-size: 13px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.body-app .perfil-campo input {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+    border: 1px solid #d5dfeb;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #031930;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.body-app .perfil-campo input:focus {
+    border-color: #087fe3;
+    box-shadow: 0 0 0 3px #087fe31a;
+}
+
+.body-app .perfil-campo input[readonly] {
+    background: #f1f5f9;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+.body-app .perfil-campo small {
+    display: block;
+    color: #788698;
+    font-size: 11px;
+    line-height: 1.45;
+    margin-top: 6px;
+}
+
+.body-app .perfil-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.body-app .perfil-guardar {
+    min-width: 155px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 7px;
+    background: #ffd100;
+    color: #031930;
+    font-size: 14px;
+    font-weight: 850;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+}
+
+.body-app .perfil-guardar:hover {
+    background: #edc400;
+    transform: translateY(-1px);
+}
+
+.body-app .perfil-guardar:disabled {
+    opacity: .65;
+    cursor: wait;
+    transform: none;
+}
+
+.body-app .perfil-mensaje {
+    min-height: 18px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.body-app .perfil-mensaje.exito {
+    color: #16804a;
+}
+
+.body-app .perfil-mensaje.error {
+    color: #b42323;
+}
+
+.body-app .perfil-historial {
+    margin-top: 24px;
+}
+
+.body-app .perfil-historial .compras-tarjeta {
+    padding: 27px 30px;
+}
+
+.body-app .perfil-historial .compras-encabezado {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 850px) {
+    .body-app .perfil-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .body-app .perfil-identidad {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .body-app .perfil-contenedor {
+        width: calc(100% - 24px);
+        margin: 18px auto 35px;
+    }
+
+    .body-app .perfil-tarjeta,
+    .body-app .perfil-historial .compras-tarjeta {
+        padding: 21px 17px;
+    }
+
+    .body-app .perfil-formulario {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .body-app .perfil-campo-completo {
+        grid-column: auto;
+    }
+
+    .body-app .perfil-seccion-encabezado h2,
+    .body-app .perfil-historial .compras-encabezado h2 {
+        font-size: 19px;
+    }
+
+    .body-app .perfil-acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .body-app .perfil-guardar {
+        width: 100%;
+    }
+}

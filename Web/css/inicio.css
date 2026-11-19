@@ -1,0 +1,150 @@
+.pagina-inicio { background: #edf2f8; }
+.pagina-inicio .header-app { gap: 16px; }
+.pagina-inicio .marca-grupo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.pagina-inicio .logo-modelorama { text-decoration:none; }
+.pagina-inicio .nav-app { flex-wrap:wrap; justify-content:flex-end; }
+.pagina-inicio .nav-item:hover { background:rgba(255,255,255,.12); }
+.pagina-inicio .btn-yellow-active:hover { background:var(--yellow-hover); }
+.pagina-inicio .btn-yellow:hover { background:var(--yellow-hover); }
+.inicio-contenido { flex:1; width:min(1320px, calc(100% - 44px)); margin:24px auto 34px; }
+.inicio-hero { display:grid; grid-template-columns:41% 59%; min-height:340px; background:linear-gradient(125deg,#052448,#07366b 72%,#0b437e); border-radius:13px; overflow:hidden; box-shadow:0 6px 24px rgba(5,30,59,.17); }
+.inicio-hero-texto { padding:clamp(24px,4vw,58px); color:white; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+.inicio-eyebrow { font-size:.75rem; font-weight:800; letter-spacing:.17em; color:#f8dc55; margin-bottom:14px; }
+.inicio-hero h1 { font-size:clamp(2rem,3.5vw,3.7rem); letter-spacing:-.035em; line-height:1.07; margin:0 0 18px; }
+.inicio-hero h1 span { color:#ffdc32; display:block; }
+.inicio-hero-texto > p:not(.inicio-registro) { max-width:400px; line-height:1.6; color:#e2ecf9; font-size:1rem; margin-bottom:23px; }
+.inicio-btn-catalogo { display:inline-flex; align-items:center; gap:8px; color:#0a2444; text-decoration:none; background:#ffda28; font-weight:850; padding:13px 23px; border-radius:6px; box-shadow:0 4px 0 #b58e00; }
+.inicio-btn-catalogo:hover { background:#ffe767; transform:translateY(-1px); }
+.inicio-registro { margin-top:23px; color:#dce8f5; font-size:.92rem; }
+.inicio-registro a { color:#ffffff; font-weight:800; text-underline-offset:3px; }
+.inicio-hero-imagen { min-width:0; position:relative; }
+.inicio-hero-imagen img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+.inicio-beneficios { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:17px; }
+.inicio-beneficio { display:flex; align-items:center; gap:15px; border:1px solid #dbe4ef; background:#fff; border-radius:9px; padding:18px 20px; }
+.inicio-beneficio-icono { color:#0b3262; display:grid; place-items:center; font-size:1.8rem; min-width:44px; }
+.inicio-beneficio h2 { font-size:1rem; font-weight:800; color:#102744; margin-bottom:4px; }
+.inicio-beneficio p { font-size:.83rem; color:#61738a; line-height:1.4; }
+.inicio-destacados { margin-top:26px; }
+.inicio-seccion-titulo { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; }
+.inicio-seccion-titulo h2 { font-size:1.55rem; color:#0b2850; }
+.inicio-seccion-titulo a { color:#005bb8; font-size:.87rem; font-weight:750; text-decoration:none; }
+.inicio-productos-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.inicio-producto { background:#fff; border:1px solid #dce4f1; border-radius:10px; padding:16px; display:flex; gap:12px; align-items:center; min-width:0; box-shadow:0 2px 10px rgba(11,44,81,.04); }
+.inicio-producto > img { width:65px; height:120px; object-fit:contain; flex:none; }
+.inicio-producto > div { display:flex; flex-direction:column; align-items:flex-start; min-width:0; gap:5px; }
+.inicio-producto h3 { font-size:.9rem; color:#132b4d; line-height:1.25; }
+.inicio-producto p { font-size:.77rem; color:#61738a; }
+.inicio-producto strong { font-size:1.13rem; color:#0a264b; }
+.inicio-producto a { background:#087fe3; border-radius:5px; color:#fff; text-decoration:none; padding:8px 10px; font-size:.76rem; font-weight:800; margin-top:3px; }
+.inicio-producto a:hover { background:#0064b5; }
+.inicio-footer { padding:16px 24px; text-align:center; background:#051d37; color:#c8d7ea; font-size:.78rem; }
+@media (max-width:1050px) {
+  .pagina-inicio .header-app { flex-wrap:wrap; justify-content:center; }
+  .pagina-inicio .nav-app { justify-content:center; }
+  .inicio-hero { grid-template-columns:48% 52%; }
+  .inicio-productos-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:700px) {
+  .inicio-contenido { width:calc(100% - 24px); margin-top:12px; }
+  .pagina-inicio .header-app { padding:14px 10px; }
+  .pagina-inicio .logo-seccion { flex-wrap:wrap; justify-content:center; }
+  .pagina-inicio .nav-app { gap:3px; }
+  .pagina-inicio .nav-item,.pagina-inicio .btn-app { padding:9px 10px; font-size:.78rem; }
+  .inicio-hero { grid-template-columns:1fr; }
+  .inicio-hero-texto { padding:30px 25px; }
+  .inicio-hero-imagen { height:235px; }
+  .inicio-beneficios { grid-template-columns:1fr; }
+  .inicio-productos-grid { grid-template-columns:1fr; }
+  .inicio-producto > img { width:80px; }
+  .inicio-seccion-titulo h2 { font-size:1.27rem; }
+}
+
+
+/* INFORMACIÓN CORPORATIVA */
+
+.inicio-empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    background: #082b55;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.empresa-imagen {
+    min-height: 350px;
+}
+
+.empresa-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.empresa-informacion {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+
+.empresa-etiqueta {
+    color: #ffda28;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.empresa-informacion h2 {
+    font-size: 32px;
+    margin: 15px 0;
+    color: white;
+}
+
+.empresa-informacion p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #e3eaf3;
+}
+
+.empresa-boton {
+    display: inline-block;
+    background: #ffda28;
+    color: #082b55;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.empresa-boton:hover {
+    background: #e8c124;
+}
+
+@media (max-width: 768px) {
+    .inicio-empresa {
+        grid-template-columns: 1fr;
+    }
+
+    .empresa-imagen {
+        min-height: 250px;
+        max-height: 280px;
+    }
+
+    .empresa-informacion {
+        padding: 25px;
+    }
+
+    .empresa-informacion h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+.inicio-registro a:hover { color:#ffdf46; }
